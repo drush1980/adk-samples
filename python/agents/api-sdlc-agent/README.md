@@ -10,16 +10,18 @@ As the lifecycle stage of an API progresses, the API hub fires a series of [even
 
 This agent demonstrates how an API platform team can easily create a sophisticated, flexible, and extensible API governance process powered by AI.
 
+## Agent Details
 
-## Agent Implementation
-
-The agent is implemented using Google's [Agent Development Kit](https://google.github.io/adk-docs/) (ADK). ADK is an open-source, code-first framework designed to help developers build, test, and deploy sophisticated AI agents. Agents developed with ADK can be [deployed](https://google.github.io/adk-docs/deploy/) to [Vertex AI Agent Engine](https://docs.cloud.google.com/agent-builder/agent-engine/overview), [Cloud Run](https://cloud.google.com/run), [GKE](https://cloud.google.com/kubernetes-engine), or other container platforms.
-
-For more examples, including showing how to use Apigee API hub to [serve your own APIs as agent tools](https://google.github.io/adk-docs/tools/google-cloud-tools/#apigee-api-hub-tools), see the [ADK samples repo](https://github.com/google/adk-samples).
+| Attribute | Detail |
+|---|---|
+|   Interaction Type |   Conversational |
+|   Complexity |   Easy |
+|   Agent Type |   Multi Agent |
+|   Components |   Tools, McpToolset |
 
 ## API hub Tool
 
-This agent uses a [tool](https://google.github.io/adk-docs/tools/) that allows it to access information in the API hub. The tool allows the agent to create new [API](https://docs.cloud.google.com/apigee/docs/apihub/apis-intro) and [Version](https://docs.cloud.google.com/apigee/docs/apihub/versions-intro) resources in the hub's catalog, and also upload generated [Specs](https://docs.cloud.google.com/apigee/docs/apihub/specs-intro). The agent is designed to access the API hub via [MCP](https://modelcontextprotocol.io/), using ADK's built-in [MCP toolset](https://google.github.io/adk-docs/tools/mcp-tools/).
+This agent uses a tool that allows it to access information in the API hub. The tool allows the agent to create new [API](https://docs.cloud.google.com/apigee/docs/apihub/apis-intro) and [Version](https://docs.cloud.google.com/apigee/docs/apihub/versions-intro) resources in the hub's catalog, and also upload generated [Specs](https://docs.cloud.google.com/apigee/docs/apihub/specs-intro). The agent is designed to access the API hub via [MCP](https://modelcontextprotocol.io/).
 
 > The implementation of the MCP tool itself is not included in this repo.
 
@@ -123,7 +125,3 @@ python3 deployment/test_deployment.py
 ```
 
 You may then interact with the deployed agent from the shell. You can type `quit` at any point to exit.
-
-# Disclaimer
-
-This code is shared solely for demonstration purposes, and is not an officially supported Google product.
